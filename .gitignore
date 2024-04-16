@@ -1,0 +1,10 @@
+# Node modules
+node_modules/
+
+# Environment Variables
+# .env*.local should not be push to remote repo
+# These keep secrets
+.env*.local
+
+# Build
+dist/
