@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useMyContext } from "../app/page";
+import { useMyContext } from "../context/myContext";
 
 interface ControlButtonProps {
   id: string;

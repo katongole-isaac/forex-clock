@@ -1,17 +1,15 @@
 "use client";
 
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import Navbar from "../components/navbar";
 import TradingSession from "../components/tradingSession";
 
-import "react-tooltip/dist/react-tooltip.css";
 import Footer from "../components/footer";
+import { MyContext } from "../context/myContext";
 
-const MyContext = React.createContext(null);
+import "react-tooltip/dist/react-tooltip.css";
 
-export const useMyContext = () => useContext(MyContext);
-
-export default function Home() {
+export default function Page() {
   const [controls, setControls] = useState<{ [x: string]: any }[]>([
     {},
     {},
