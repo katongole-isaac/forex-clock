@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Navbar from "../components/navbar";
-import { Metadata } from "next";
 import TradingSession from "../components/tradingSession";
 
 import Footer from "../components/footer";
@@ -10,10 +9,6 @@ import { MyContext } from "../context/myContext";
 
 import "react-tooltip/dist/react-tooltip.css";
 
-export const metadata: Metadata = {
-  title: "Forex Session Clocks",
-  description: "This is an Open-Source Project focused to show the Major Trading Session"
-}
 
 export default function Page() {
   const [controls, setControls] = useState<{ [x: string]: any }[]>([
