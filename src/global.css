@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+
+  .main-clock-bar {
+    background: rgb(33, 36, 44);
+    @apply w-[0.4rem] h-10 absolute;
+  }
+
+  .minor-clock-bar {
+    height: 600px;
+    background: rgb(45, 46, 48);
+    @apply w-[0.2rem] h-10 absolute;
+  }
+
+  .main-bar-1 {
+    @apply top-0;
+  }
+
+  .main-bar-2 {
+    transform: rotate(90deg);
+    @apply right-0;
+  }
+
+  .main-bar-3 {
+    @apply bottom-0;
+  }
+  .main-bar-4 {
+    transform: rotate(270deg);
+    @apply left-0;
+  }
+
+  .minor-bar-1 {
+    transform-origin: center;
+    transform: rotate(30deg);
+    height: 600px;
+  }
+
+  .minor-bar-2 {
+    transform-origin: center;
+    transform: rotate(60deg);
+    height: 600px;
+  }
+  .minor-bar-3 {
+    transform-origin: center;
+    transform: rotate(120deg);
+    height: 600px;
+  }
+  .minor-bar-4 {
+    transform-origin: center;
+    transform: rotate(150deg);
+    height: 600px;
+  }
+  .minor-bar-5 {
+    transform-origin: center;
+    transform: rotate(210deg);
+    height: 600px;
+  }
+  .minor-bar-6 {
+    transform-origin: center;
+    transform: rotate(240deg);
+    height: 600px;
+  }
+  .minor-bar-7 {
+    transform-origin: center;
+    transform: rotate(300deg);
+    height: 600px;
+  }
+  .minor-bar-8 {
+    transform-origin: center;
+    transform: rotate(330deg);
+    height: 600px;
+  }
+
+  .hands {
+    @apply absolute;
+  }
+
+  .hour-hand {
+    background: linear-gradient(to bottom, black 50%, transparent 60%);
+    @apply w-[0.28rem] h-[45%] bg-transparent;
+  }
+  .minute-hand {
+    transform-origin: center;
+    background: linear-gradient(to bottom, black 50%, transparent 60%);
+    @apply w-[0.15rem] h-[75%]  bg-transparent;
+  }
+  .second-hand {
+    background: linear-gradient(to bottom, rgb(15 23 42) 50%, transparent 60%);
+    @apply w-[0.05rem] h-[85%] bg-transparent;
+  }
+}
