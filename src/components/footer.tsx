@@ -9,7 +9,10 @@ export default function Footer() {
             This is an Open-Source Project, so feel free to do what you want
             with it. You can find it{" "}
             <span className="font-bold underline hover:text-blue-500">
-              <a target="_blank" href="">
+              <a
+                target="_blank"
+                href="https://github.com/katongole-isaac/forex-clock"
+              >
                 @katongole-isaac
               </a>
             </span>
