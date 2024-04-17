@@ -1,7 +1,7 @@
 "use client";
 
 import moment, { Moment } from "moment-timezone";
-import React, { useEffect, useImperativeHandle, useRef } from "react";
+import React, { useCallback, useEffect, useImperativeHandle, useRef } from "react";
 
 interface Props {
   zoneDate?: Moment;
@@ -17,7 +17,7 @@ const Clock = React.forwardRef<any, Props>((props, ref) => {
   const mainClockBar = useRef<HTMLDivElement[]>([]);
   const minorClockBar = useRef<HTMLDivElement[]>([]);
 
-  const calculateDegress = () => {
+  const calculateDegress = useCallback(() => {
     const now = zoneDate ? zoneDate : moment();
     const hours = now.get("hours");
     const minutes = now.get("minutes");
@@ -32,12 +32,12 @@ const Clock = React.forwardRef<any, Props>((props, ref) => {
     hourHand.current!.style.transform = `rotate(${hourDegrees}deg)`;
     minuteHand.current!.style.transform = `rotate(${minuteDegrees}deg)`;
     secondHand.current!.style.transform = `rotate(${secondDegress}deg)`;
-  };
+  },[zoneDate])
 
  
   useEffect(() => {
     calculateDegress();
-  }, [zoneDate]);
+  }, [zoneDate, calculateDegress]);
 
   const addClockShape = (shape: string) => {
     clockRef.current.classList.forEach(
@@ -167,3 +167,4 @@ const Clock = React.forwardRef<any, Props>((props, ref) => {
 });
 
 export default Clock;
+Clock.displayName = "Clock"

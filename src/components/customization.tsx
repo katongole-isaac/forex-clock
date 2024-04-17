@@ -147,15 +147,12 @@ const ControlRadioButton: React.FC<ControlButtonProps> = ({
     <div className="flex gap-2 items-center" role="button">
       <input
         type="radio"
+        onClick={() => (click ? click() : null)}
         id={id}
         name="clock_shape"
         className="cursor-pointer"
       />
-      <label
-        htmlFor={id}
-        onClick={() => (click ? click() : null)}
-        className="cursor-pointer text-sm select-none"
-      >
+      <label htmlFor={id} className="cursor-pointer text-sm select-none">
         {label}
       </label>
     </div>
